@@ -1,6 +1,5 @@
 <div id="woopra-profile">
 <iframe id="profile-frame"
-        style="height: 600px;"
         src="https://www.woopra.com/widgets2/embed?type=profile&website=woopra.com&id={{email}}&ver={{version}}&theme={{theme}}">
 </iframe>
 </div>

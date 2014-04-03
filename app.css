@@ -15,3 +15,8 @@ h3 {
 li + li {
   margin-top: 0.4em;
 }
+
+#profile-frame {
+    width: 100%;
+    height: 600px;
+}

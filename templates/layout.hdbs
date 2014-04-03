@@ -1,7 +1,1 @@
-<script src="https://static.woopra.com/js/widgets/embed/woopra.embed.client.min.js"></script>
-<header id="header">
-  <span class="logo"/>
-  <h3>Woopra Profile!</h3>
-</header>
-
 <section data-main />
