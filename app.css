@@ -1,0 +1,17 @@
+h3 {
+  line-height: 30px;
+}
+
+.logo {
+  background-image: app-asset-url("logo-small.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  float: right;
+  height: 25px;
+  width: 25px;
+}
+
+li + li {
+  margin-top: 0.4em;
+}

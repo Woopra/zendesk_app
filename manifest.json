@@ -1,0 +1,12 @@
+{
+  "author": {
+    "name": "Woopra",
+    "email": "support@woopra.com"
+  },
+
+  "location": "ticket_sidebar",
+  "defaultLocale": "en",
+  "private": false,
+  "singleInstall": true,
+  "frameworkVersion": "0.5"
+}

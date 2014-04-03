@@ -1,0 +1,14 @@
+{
+  "app": {
+   "description": "Access bookmarked tickets from our iPad & iPhone app",
+   "name":        "Example Bookmarks"
+  },
+
+  "add": {
+    "done":   "Bookmarked ticket #{{id}}",
+    "failed": "Failed to bookmark ticket #{{id}}"
+  },
+
+  "bookmark_this_ticket": "Bookmark This Ticket",
+  "none":                 "No bookmarks"
+}
