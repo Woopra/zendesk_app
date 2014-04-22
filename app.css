@@ -1,4 +1,9 @@
+#woopra-profile {
+    height: 100%;
+    width: 100%;
+}
+
 #profile-frame {
     width: 100%;
-    height: 600px;
+    height: 90%;
 }
