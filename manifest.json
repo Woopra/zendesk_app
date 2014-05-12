@@ -9,7 +9,7 @@
   "private": false,
   "singleInstall": true,
   "frameworkVersion": "1.0",
-  "version": "0.9",
+  "version": "1.1",
   "parameters": [{
       "name": "website",
       "type": "text",
