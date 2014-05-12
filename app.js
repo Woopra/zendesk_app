@@ -11,22 +11,29 @@
 
         // Below this point, you're free to define your own functions used by the app
         renderWoopra: function() {
-            var requester = this.ticket().requester();
+            var requester;
+            var ticket;
             var email;
 
-            if (requester) {
-                email = requester.email();
-
-                if (email) {
-
-                    this.switchTo('profile', {
-                        base_url: URL,
-                        website: this.setting('website'),
-                        email: email,
-                        theme: 'zendesk',
-                        version: new Date().getTime()
-                    });
+            if (this.ticket) {
+                ticket = this.ticket();
+                if (ticket && ticket.requester()) {
+                    email = ticket.requester().email();
                 }
+            }
+            else if (this.user) {
+                email = this.user().email();
+            }
+
+            if (email) {
+
+                this.switchTo('profile', {
+                    base_url: URL,
+                    website: this.setting('website'),
+                    email: email,
+                    theme: 'zendesk',
+                    version: new Date().getTime()
+                });
             }
         }
     };
