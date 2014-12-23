@@ -3,7 +3,9 @@
     width: 100%;
 }
 
-#profile-frame {
+#woopra-profile iframe, #profile-frame {
     width: 100%;
     height: 90%;
 }
+
+

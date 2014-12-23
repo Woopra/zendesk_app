@@ -1,5 +1,3 @@
 <div id="woopra-profile">
-    <iframe id="profile-frame"
-            src="{{base_url}}&website={{website}}&id={{email}}&ver={{version}}&theme={{theme}}">
-    </iframe>
+    {{iframe iframe_src}}
 </div>
