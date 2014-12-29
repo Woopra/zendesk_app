@@ -2,6 +2,9 @@
 
     var URL = 'https://www.woopra.com/widgets/embed?type=profile&embed_ver=zendesk';
 
+    // Magic number for the padding on the size relative to window height
+    var SIDEBAR_PADDING = 210;
+
     return {
 
         // Here we define events such as a user clicking on something
@@ -15,7 +18,13 @@
         handleClientReady: function(e) {
         },
 
-        handleWindowResize: function(width, height) {
+        handleWindowResize: function(param) {
+            var height = 600; // default min height
+
+            if (param.height > 600) {
+                height = param.height - SIDEBAR_PADDING;
+            }
+
             this.setHeight(height);
         },
 
