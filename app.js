@@ -1,6 +1,6 @@
 (function() {
 
-    var URL = 'https://www.woopra.com/widgets/embed?type=profile&embed_ver=dev';
+    var URL = 'https://www.woopra.com/widgets/embed?type=profile&embed_ver=zendesk';
 
     return {
 
