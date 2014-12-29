@@ -8,15 +8,27 @@
         events: {
             'iframe.clientReady': 'handleClientReady',
             'iframe.setHeight': 'handleSetHeight',
+            'window.resize': 'handleWindowResize',
             'app.activated': 'renderWoopra'
         },
 
         handleClientReady: function(e) {
         },
 
+        handleWindowResize: function(width, height) {
+            this.setHeight(height);
+        },
+
         handleSetHeight: function(param) {
+            this.setHeight(param.height);
+        },
+
+        /**
+         * Set height of the iframe
+         */
+        setHeight: function(height) {
             this.$('#woopra-profile iframe').css({
-                height: param.height
+                height: height
             });
         },
 
