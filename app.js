@@ -60,7 +60,7 @@
             if (email) {
                 this.switchTo('profile', {
                     base_url: URL,
-                    iframe_src: URL + "&website=" + this.setting('website') + "&id=" + email + "&ver=" + new Date().getTime() + "&theme=zendesk",
+                    iframe_src: URL + "&website=" + this.setting('website') + "&id=" + encodeURIComponent(email) + "&ver=" + new Date().getTime() + "&theme=zendesk",
                     website: this.setting('website'),
                     email: email
                 });
