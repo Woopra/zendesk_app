@@ -1,7 +1,11 @@
 zendesk_app
 ===========
 
-Zendesk App (currently only an embeddable profile inside of Zendesk)
+Zendesk App 
+Runs in zendesk in conjunction with woopra-app-zendesk which runs in Woopra.
+* View Woopra profile in Zendesk
+* Use Woopra to Trigger upgrading ticket priorities 
+* Track Zendesk support requests in Woopra.
 
 
 ###Zendesk marketplace content:
