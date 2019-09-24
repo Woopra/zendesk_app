@@ -49,7 +49,7 @@
             var requester;
             var ticket;
             var email;
-            var client = ZAFClient.init();
+            // var client = ZAFClient.init();
 
             if (client.getTicket()) {
                 ticket = client.getTicket();

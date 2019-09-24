@@ -14,8 +14,8 @@
   "defaultLocale": "en",
   "private": false,
   "singleInstall": true,
-  "frameworkVersion": "1.0",
-  "version": "1.3",
+  "frameworkVersion": "2.0",
+  "version": "2.0",
   "parameters": [{
       "name": "website",
       "type": "text",
