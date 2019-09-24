@@ -1,40 +1,46 @@
 <html>
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@zendeskgarden/css-bedrock@7.0" type="text/css">
-</head>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@zendeskgarden/css-bedrock@7.0" type="text/css" />
+  </head>
 
-<body>
-  <section data-main></section>
+  <body>
+    <section data-main></section>
 
-  <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
-  <script type="text/javascript" src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+    <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
+    <script
+      type="text/javascript"
+      src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"
+    ></script>
 
-  <script>
-    // Initialise the Zendesk JavaScript API client
-    // https://developer.zendesk.com/apps/docs/apps-v2
-    var client = ZAFClient.init();
+    <script>
+      // Initialise the Zendesk JavaScript API client
+      // https://developer.zendesk.com/apps/docs/apps-v2
+      var client = ZAFClient.init();
 
-    client.on('app.registered', function() {
-      client.invoke('resize', { width: '100%', height: '600px' });
-    });
-
-    function clientGet(path) {
-      return client.get(path).then(function (data) {
-        return data && data[path];
-      }).catch(function(){
-        return null;
-      })
-    }
-
-    function getEmail() {
-      return clientGet('ticket.requester.email').then(function(email) {
-        if (email) {
-          return email
-        }
-
-        return clientGet('user.email');
+      client.on('app.registered', function() {
+        client.invoke('resize', { width: '100%', height: '600px' });
       });
-    }
+
+      function clientGet(path) {
+        return client
+          .get(path)
+          .then(function(data) {
+            return data && data[path];
+          })
+          .catch(function() {
+            return null;
+          });
+      }
+
+      function getEmail() {
+        return clientGet('ticket.requester.email').then(function(email) {
+          if (email) {
+            return email;
+          }
+
+          return clientGet('user.email');
+        });
+      }
 
       var URL = 'https://www.woopra.com/widgets/embed?type=profile&embed_ver=zendesk';
 
@@ -42,7 +48,7 @@
         init();
       });
 
-      client.on('ticket.requester.email.changed', function(){
+      client.on('ticket.requester.email.changed', function() {
         init();
       });
 
@@ -50,23 +56,27 @@
         var mainSectionEl = document.querySelector('section[data-main]');
 
         getEmail().then(function(email) {
-          client.metadata().then(function(metadata){
+          client.metadata().then(function(metadata) {
             if (email) {
-                var url = URL + "&website=" + metadata.settings.website + "&id=" + encodeURIComponent(email) + "&ver=" + new Date().getTime() + "&theme=zendesk";
-                var iframe = document.createElement('iframe');
-                iframe.setAttribute("src", url);
-                mainSectionEl.innerHTML = "";
-                mainSectionEl.appendChild(iframe);
-                iframe.setAttribute("height", "600px");
-                iframe.setAttribute("width", "100%");
+              var url =
+                URL +
+                '&website=' +
+                metadata.settings.website +
+                '&id=' +
+                encodeURIComponent(email) +
+                '&ver=' +
+                new Date().getTime() +
+                '&theme=zendesk';
+              var iframe = document.createElement('iframe');
+              iframe.setAttribute('src', url);
+              mainSectionEl.innerHTML = '';
+              mainSectionEl.appendChild(iframe);
+              iframe.setAttribute('height', '600px');
+              iframe.setAttribute('width', '100%');
             }
           });
         });
       }
-
-        // Magic number for the padding on the size relative to window height
-        var SIDEBAR_PADDING = 210;
-
-  </script>
-</body>
+    </script>
+  </body>
 </html>

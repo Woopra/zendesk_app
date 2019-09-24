@@ -6,7 +6,7 @@
   },
   "location": {
     "support": {
-      "ticket_sidebar":     "assets/iframe.html",
+      "ticket_sidebar": "assets/iframe.html",
       "new_ticket_sidebar": "assets/iframe.html",
       "user_sidebar": "assets/iframe.html"
     }
@@ -16,9 +16,11 @@
   "singleInstall": true,
   "frameworkVersion": "2.0",
   "version": "2.0",
-  "parameters": [{
+  "parameters": [
+    {
       "name": "website",
       "type": "text",
       "required": true
-  }]
+    }
+  ]
 }

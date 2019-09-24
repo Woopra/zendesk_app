@@ -1,10 +1,10 @@
 {
   "app": {
-      "parameters": {
-          "website": {
-              "label": "Website",
-              "helpText": "Name of website on Woopra.com"
-          }
+    "parameters": {
+      "website": {
+        "label": "Website",
+        "helpText": "Name of website on Woopra.com"
       }
+    }
   }
 }
