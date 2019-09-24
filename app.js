@@ -1,5 +1,8 @@
 (function() {
 
+    //import ZAF SDK into the iframe HTML
+    <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+
     var URL = 'https://www.woopra.com/widgets/embed?type=profile&embed_ver=zendesk';
 
     // Magic number for the padding on the size relative to window height
@@ -46,15 +49,18 @@
             var requester;
             var ticket;
             var email;
+            var client = ZAFClient.init();
 
             if (this.ticket) {
                 ticket = this.ticket();
-                if (ticket && ticket.requester()) {
-                    email = ticket.requester().email();
+                if (ticket && client.get('ticket.requester')) {
+                  client.get('ticket.requester.name').then(function(data) {
+                    email = data;
+                  });
                 }
             }
             else if (this.user) {
-                email = this.user().email();
+                email = client.get('userFields:email');
             }
 
             if (email) {

@@ -4,8 +4,13 @@
     "email": "support@woopra.com",
     "url": "http://www.woopra.com"
   },
-
-  "location": ["ticket_sidebar", "new_ticket_sidebar", "user_sidebar"],
+  "location": {
+    "support": {
+      "ticket_sidebar":     "assets/index.html",
+      "new_ticket_sidebar": "assets/index.html",
+      "user_sidebar": "assets/iframe.html"
+    }
+  },
   "defaultLocale": "en",
   "private": false,
   "singleInstall": true,
