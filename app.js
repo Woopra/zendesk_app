@@ -51,16 +51,17 @@
             var email;
             var client = ZAFClient.init();
 
-            if (this.ticket) {
-                ticket = this.ticket();
+            if (client.getTicket()) {
+                ticket = client.getTicket();
+
                 if (ticket && client.get('ticket.requester')) {
-                  client.get('ticket.requester.name').then(function(data) {
+                  client.get('ticket.requester.email').then(function(data) {
                     email = data;
                   });
                 }
             }
-            else if (this.user) {
-                email = client.get('userFields:email');
+            else if (client.getCurrentUser()) {
+                email = client.getCurrentUser().email;
             }
 
             if (email) {
