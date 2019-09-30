@@ -4,16 +4,23 @@
     "email": "support@woopra.com",
     "url": "http://www.woopra.com"
   },
-
-  "location": ["ticket_sidebar", "new_ticket_sidebar", "user_sidebar"],
+  "location": {
+    "support": {
+      "ticket_sidebar": "assets/iframe.html",
+      "new_ticket_sidebar": "assets/iframe.html",
+      "user_sidebar": "assets/iframe.html"
+    }
+  },
   "defaultLocale": "en",
   "private": false,
   "singleInstall": true,
-  "frameworkVersion": "1.0",
-  "version": "1.3",
-  "parameters": [{
+  "frameworkVersion": "2.0",
+  "version": "2.0",
+  "parameters": [
+    {
       "name": "website",
       "type": "text",
       "required": true
-  }]
+    }
+  ]
 }
