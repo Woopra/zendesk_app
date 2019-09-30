@@ -1,7 +1,11 @@
 {
   "app": {
+    "name": "Woopra",
+    "short_description": "Woopra helps companies better assist their users by giving them visibility what users have done on their website or app.",
+    "long_description": "Combine Woopra's real-time behavioral data with Zendesk to proactively resolve issues and increase enagagement. Support reps can immediately understand a user’s behavior in order to troubleshoot quickly and without burdening the user with unnecessary questions and delays. Streamline support and provide personalized guidance with real-time, unified data in Woopra.",
+    "installation_instructions": "Click the install button",
     "parameters": {
-      "website": {
+      "disable_conflicts_prevention": {
         "label": "Website",
         "helpText": "Name of website on Woopra.com"
       }
