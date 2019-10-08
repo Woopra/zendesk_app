@@ -1,7 +1,7 @@
 {
   "app": {
     "name":"name",
-    "description",
+    "description":"description",
     "parameters": {
       "website": {
         "label": "Website",
