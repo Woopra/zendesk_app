@@ -1,10 +1,9 @@
 {
   "app": {
     "name":"Woopra",
-    "description":"Woopra helps companies better assist their users by giving them visibility what users have done on their website or app.",
-    "installation_instructions":"Click the install button",
+    "short_description":"Woopra is a customer analytics service used by sales, service and marketing teams. The platform is designed to help organizations optimize the customer life-cycle.",
     "long_description":"Combine Woopra's real-time behavioral data with Zendesk to proactively resolve issues and increase enagagement. Support reps can immediately understand a user’s behavior in order to troubleshoot quickly and without burdening the user with unnecessary questions and delays. Streamline support and provide personalized guidance with real-time, unified data in Woopra.",
-    "installation_instructions": "Click the install button",
+    "installation_instructions": "1. Click the install button. 2.Select Zendesk account to install. The integration will automatically setup the Woopra app in Zendesk 3. After installation, select the actions you wish to track from the configuration tab. 4) Select the events you wish to sync between Woopra and Zendesk. 5) Select 'Apply Configuration' to begin syncing data 6)  To use the Zendesk Trigger actions, navigate to 'Configure' and 'Create Trigger'. Select the segment of users, trigger action and frequency. Select 'Add Action' to select the appropriate Zendesk action and save your configuration.",
     "parameters": {
       "website": {
         "label": "Website",
